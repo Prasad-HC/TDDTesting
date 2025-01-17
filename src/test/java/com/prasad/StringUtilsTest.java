@@ -57,7 +57,7 @@ public class StringUtilsTest {
 
   @Test
   public void testDecimalInInput(){
-    assertEquals(4,  stringUtil.sumOfDigits("1.0,2.2,3.3"), "5");
+    assertEquals(6,  stringUtil.sumOfDigits("1.1,2.2,3.3"), "6");
   }
 
 }

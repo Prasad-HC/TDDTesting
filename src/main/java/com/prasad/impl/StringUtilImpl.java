@@ -16,7 +16,7 @@ public class StringUtilImpl implements StringUtil {
         return Stream.of(str.split(","))
                 .map(String::trim)
                 .filter(this::isNumeric)
-                .mapToInt(Integer::parseInt)
+                .mapToInt(s -> (int) Double.parseDouble(s))
                 .sum();
     }
 
@@ -26,7 +26,7 @@ public class StringUtilImpl implements StringUtil {
      */
     private boolean isNumeric(String str) {
         try {
-            Integer.parseInt(str);
+            Double.parseDouble(str);
             return true;
         } catch (NumberFormatException e) {
             return false;
