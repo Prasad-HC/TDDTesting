@@ -34,4 +34,11 @@ public class StringUtilsTest {
   }
 
 
+  @Test
+  public void testSpceArroundNumbers() {
+    assertEquals(10,  stringUtil.sumOfDigits("1 ,2 , 3, 4 "), "2");
+  }
+
+
+
 }
