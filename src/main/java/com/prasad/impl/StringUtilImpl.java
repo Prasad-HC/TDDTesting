@@ -15,7 +15,21 @@ public class StringUtilImpl implements StringUtil {
 
         return Stream.of(str.split(","))
                 .map(String::trim)
+                .filter(this::isNumeric)
                 .mapToInt(Integer::parseInt)
                 .sum();
+    }
+
+
+    /**
+     * Checks if a string can be parsed as a number.
+     */
+    private boolean isNumeric(String str) {
+        try {
+            Integer.parseInt(str);
+            return true;
+        } catch (NumberFormatException e) {
+            return false;
+        }
     }
 }

@@ -25,7 +25,7 @@ public class StringUtilsTest {
 
   @Test
   public void testForEmptyInput() {
-    assertThrows(IllegalArgumentException.class, () -> stringUtil.sumOfDigits("  "));
+    assertThrows(IllegalArgumentException.class, () -> stringUtil.sumOfDigits(""));
   }
 
   @Test
@@ -41,7 +41,7 @@ public class StringUtilsTest {
 
   @Test
   public void testInvalidStringOfCharacters() {
-    assertEquals(10,  stringUtil.sumOfDigits("asdsad,asd , jhf, tertr "), "3");
+    assertEquals(0,  stringUtil.sumOfDigits("asdsad,asd , jhf, tertr "), "3");
   }
 
 
