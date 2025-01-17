@@ -14,6 +14,7 @@ public class StringUtilImpl implements StringUtil {
         }
 
         return Stream.of(str.split(","))
+                .map(String::trim)
                 .mapToInt(Integer::parseInt)
                 .sum();
     }
