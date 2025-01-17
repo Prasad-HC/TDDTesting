@@ -39,6 +39,11 @@ public class StringUtilsTest {
     assertEquals(10,  stringUtil.sumOfDigits("1 ,2 , 3, 4 "), "2");
   }
 
+  @Test
+  public void testInvalidStringOfCharacters() {
+    assertEquals(10,  stringUtil.sumOfDigits("asdsad,asd , jhf, tertr "), "3");
+  }
+
 
 
 }
