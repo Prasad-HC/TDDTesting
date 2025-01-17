@@ -60,4 +60,8 @@ public class StringUtilsTest {
     assertEquals(6,  stringUtil.sumOfDigits("1.1,2.2,3.3"), "6");
   }
 
+  @Test
+  public void testMixedDataTypeInput(){
+    assertEquals(31,  stringUtil.sumOfDigits("1.1,asdf,,3, ,null,9,   18   "), "7");
+  }
 }
