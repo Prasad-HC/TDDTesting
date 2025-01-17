@@ -49,5 +49,9 @@ public class StringUtilsTest {
     assertEquals(4,  stringUtil.sumOfDigits("1,,3"), "4");
   }
 
+  @Test
+  public void testIntgerValueWithStringValuesInInput(){
+    assertEquals(4,  stringUtil.sumOfDigits("1,asdhsald,3"), "5");
+  }
 
 }
