@@ -2,6 +2,8 @@ package com.prasad.impl;
 
 import com.prasad.StringUtil;
 
+import java.util.stream.Stream;
+
 public class StringUtilImpl implements StringUtil {
 
 
@@ -10,6 +12,9 @@ public class StringUtilImpl implements StringUtil {
         if (str == null || str.length() == 0) {
             throw new IllegalArgumentException("Input string cannot be null");
         }
-        return 0;
+
+        return Stream.of(str.split(","))
+                .mapToInt(Integer::parseInt)
+                .sum();
     }
 }
