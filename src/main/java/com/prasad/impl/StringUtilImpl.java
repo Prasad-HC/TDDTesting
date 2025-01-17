@@ -1,12 +1,16 @@
 package com.prasad.impl;
 
 import com.prasad.StringUtil;
-
 import java.util.stream.Stream;
 
 public class StringUtilImpl implements StringUtil {
 
-
+    /**
+     * Utility method which take comma seperated value of integers
+     * and return sum of all those values
+     * @param  str
+     * @return sum of all integers
+     */
     @Override
     public int sumOfDigits(String str) {
         if (str == null || str.length() == 0) {
