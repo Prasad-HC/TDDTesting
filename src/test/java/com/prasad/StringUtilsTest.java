@@ -22,4 +22,11 @@ public class StringUtilsTest {
     public void testForNullInput() {
     assertThrows(IllegalArgumentException.class, () -> stringUtil.sumOfDigits(null));
     }
+
+  @Test
+  public void testForEmptyInput() {
+    assertThrows(IllegalArgumentException.class, () -> stringUtil.sumOfDigits(""));
+  }
+
+
 }
