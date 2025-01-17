@@ -44,6 +44,10 @@ public class StringUtilsTest {
     assertEquals(0,  stringUtil.sumOfDigits("asdsad,asd , jhf, tertr "), "3");
   }
 
+  @Test
+  public void testEmptyValuesInValidString(){
+    assertEquals(4,  stringUtil.sumOfDigits("1,,3"), "4");
+  }
 
 
 }
