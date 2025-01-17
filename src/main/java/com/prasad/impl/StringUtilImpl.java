@@ -6,10 +6,10 @@ public class StringUtilImpl implements StringUtil {
 
 
     @Override
-    public Double sumOfDigits(String str) {
+    public int sumOfDigits(String str) {
         if (str == null || str.length() == 0) {
             throw new IllegalArgumentException("Input string cannot be null");
         }
-        return 0.0;
+        return 0;
     }
 }
